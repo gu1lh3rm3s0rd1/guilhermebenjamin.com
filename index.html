@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Benjamin</title>
+    <link rel="shortcut icon" href="./img/imagem-perfil.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism-okaidia.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@2.0.0/marked.min.js"></script>
+
+    <style>
+        :root {
+            --cor1: #0e0f11;
+            --cor2: #1f6feb;
+            --cor3: #0d1117;
+            --cor4: #30363d;
+            --cor5: #f0f0f0;
+            --cor6: #ffffff;
+            --cor7: #fff;
+        }
+
+        body {
+            background-color: var(--cor1);
+            color: var(--cor6);
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .container {
+            /* background-color: var(--cor1); */
+            margin: 5% auto;
+            border-radius: 8px;
+            width: 80%;
+            overflow-y: auto;
+        }
+
+        .rodape {
+            display: flex;
+            align-content: center;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 3vw;
+            margin-top: 4vw;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            /* color: var(--cor3); */
+            margin-bottom: 0.5em;
+        }
+
+        p,
+        ol,
+        ul {
+            margin-bottom: 1em;
+            /* color: var(--cor6); */
+        }
+
+        code {
+            background-color: var(--cor3);
+            border: 1px solid var(--cor4);
+            border-radius: 6px;
+            padding: 2px 6px;
+            color: var(--cor6);
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--cor2);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .thumbnail-img {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--cor6);
+            z-index: 9999;
+        }
+
+        .light-theme {
+            background-color: var(--cor5);
+            color: var(--cor1);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark-theme {
+            background-color: var(--cor1);
+            color: var(--cor7);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        #markdownContent,
+        #mensagem {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            body {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="markdownContent">
+    </div>
+
+    <div class="container" id="mensagem">
+        <code class="language-python">
+            print("espero que tenha gostado 😊")
+        </code>
+        <br><br>
+        <code class="language-python">
+            print("deixe um like clicando na estrelinha ⭐ do <a href="https://github.com/gu1lh3rm3s0rd1/backfolio">repositório</a>")
+        </code>
+    </div>
+
+    <div class="rodape">
+        &copy; 2024 Guilherme Benjamim Sordi. Todos os direitos reservados.
+    </div>
+
+    <img src="/img/imagem-perfil.jpeg" class="thumbnail-img" id="theme-toggler">
+
+    <script>
+        fetch('README.md')
+            .then(response => response.text())
+            .then(data => {
+                const markdownContent = marked(data);
+                document.getElementById('markdownContent').innerHTML = markdownContent;
+            })
+            .catch(error => console.error('Erro ao carregar o arquivo:', error));
+    </script>
+
+    <script>
+        document.getElementById('theme-toggler').addEventListener('click', function () {
+            // Verifica se o tema atual é claro
+            if (document.body.classList.contains('light-theme')) {
+                document.body.classList.remove('light-theme');
+                document.body.classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('light-theme');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
