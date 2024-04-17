@@ -50,4 +50,4 @@ Se você gostaria de discutir oportunidades de colaboração ou simplesmente gos
 - **[LinkedIn](https://www.linkedin.com/in/guilherme-benjamin-sordi-33ab06233/)**
 - **[Instagram](https://www.instagram.com/guilhermesordi_/)**
 - **[GitHub](https://github.com/gu1lh3rm3s0rd1)**
-- **[Website](https://guilhermebenjamin.netlify.app/index.html)**
+- **[Website](https://frontfolio.netlify.app/)**
