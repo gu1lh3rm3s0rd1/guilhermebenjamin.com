@@ -1,3 +1,5 @@
+document.body.classList.add('light-theme');
+
 fetch('README.md')
     .then(response => response.text())
     .then(data => {
