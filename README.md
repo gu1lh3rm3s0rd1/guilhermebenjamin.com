@@ -33,13 +33,13 @@ Atualmente, possuo as seguintes certificações:
 
 Aqui estão alguns dos projetos nos quais trabalhei:
 
-1. 
+1. Projeto 1
 - [Link para o projeto (se disponível)] | [Link para o repositório no GitHub (se disponível)]
 
-1. 
+2. Projeto 2
 - [Link para o projeto (se disponível)] | [Link para o repositório no GitHub (se disponível)]
 
-1. 
+3. Projeto 3
 - [Link para o projeto (se disponível)] | [Link para o repositório no GitHub (se disponível)]
 
 
